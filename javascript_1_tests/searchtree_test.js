@@ -2,6 +2,7 @@ var assert = require('assert');
 var grid = require('../../js7_code/javascript_1_code/grid');
 var st = require('../../js7_ha/javascript_1_ha/searchtree');
 
+// function computeStats(g)
 assert.deepEqual(st.computeStats(grid.create('XXX|...|...')), {
     X: { '3': 1, '2': 0 },
     O: { '3': 0, '2': 0 },
