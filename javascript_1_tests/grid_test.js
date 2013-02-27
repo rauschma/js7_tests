@@ -1,3 +1,5 @@
+// Thema: Ein 3x3-Gitter per Array implementieren
+
 var assert = require('assert');
 var grid = require('../../js7_code/javascript_1_code/grid');
 

@@ -1,3 +1,5 @@
+// Hausaufgabe. Thema: Suchbaum und Minimax-Algorithmus
+
 var assert = require('assert');
 var grid = require('../../js7_code/javascript_1_code/grid');
 var st = require('../../js7_ha/javascript_1_ha/searchtree');
