@@ -1,5 +1,5 @@
 var assert = require('assert');
-var sort = require('../../js7_code/javascript_1_code/sort');
+var sort = require('../../js7_code/javascript_3_code/sort');
 
 assert.deepEqual(sort.sortStrings([]), []);
 

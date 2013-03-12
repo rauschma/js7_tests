@@ -1,6 +1,6 @@
 var fs = require('fs');
 var readline = require('readline');
-var hangman_helper = require('../../js7_code/javascript_1_code/hangman_helper');
+var hangman_helper = require('../../js7_code/javascript_3_code/hangman_helper');
 
 var LEGAL_CHARS = /^[A-ZÄÖÜa-zäöü]$/;
 

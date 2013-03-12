@@ -1,5 +1,5 @@
 var assert = require('assert');
-var isObject = require('../../js7_code/javascript_1_code/isObject');
+var isObject = require('../../js7_code/javascript_2_code/isObject');
 
 assert.equal(isObject({}), true);
 assert.equal(isObject(Object.create(null)), true);
