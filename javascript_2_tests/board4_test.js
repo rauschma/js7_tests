@@ -1,5 +1,5 @@
 var assert = require('assert');
-var board4 = require('../../js7_ha/javascript_2_ha/board4');
+var board4 = require('.././javascript_2_ha/board4');
 
 testParsingAndCounts();
 testMakeMove();
