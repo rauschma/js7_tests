@@ -1,5 +1,5 @@
 var assert = require('assert');
-var hh = require('../../js7_code/javascript_3_code/hangman_helper');
+var hh = require('../../js7_code/javascript_4_code/hangman_helper');
 
 // function computeResult(word, usedChars)
 
