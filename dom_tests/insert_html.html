@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="../../js7_code/dom_code/insert_html.js"></script>
+    <script type="text/javascript" src="../underscore.js"></script>
+    <script type="text/javascript">
+        var data = [
+            { title: 'Foo', authors: 'Bar' },
+            { title: 'Bla', authors: 'Blubber' }
+        ];
+        window.addEventListener('DOMContentLoaded', function () {
+            var templateText = document.getElementById('template').innerHTML;
+            var template = _.template(templateText);
+            var table = document.getElementById('contentTable');
+            data.forEach(function (obj) {
+                table.insertAdjacentHTML('beforeend', template(obj));
+            });
+        });
+    </script>
+    <script id="template" type="text/template">
+        <tr><td><%=title%></td><td><%=authors%></td></tr>
+    </script>
+</head>
+<body>
+    <table id="contentTable" border=1>
+    </table>
+</body>
+</html>
