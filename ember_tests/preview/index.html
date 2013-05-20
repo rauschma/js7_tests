@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+    <link rel="stylesheet" href="../_css/normalize.css">
+    <link rel="stylesheet" href="../_css/style.css">
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    <h2>Preview</h2>
+
+      <div>{{view Ember.TextArea valueBinding="inputText" rows="12" cols="70"}}</div>
+
+      <!-- Aufgabe:
+      <div>{{{previewHtml}}}</div>
+      -->
+  </script>
+
+  <script src="../_lib/jquery-1.9.1.js"></script>
+  <script src="../_lib/handlebars-1.0.0-rc.3.js"></script>
+  <script src="../_lib/ember-1.0.0-rc.3.js"></script>
+  <script src="preview.js"></script>
+
+</body>
+</html>

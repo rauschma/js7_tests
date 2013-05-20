@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+    <link rel="stylesheet" href="../_css/normalize.css">
+    <link rel="stylesheet" href="../_css/style.css">
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    <h2>Question</h2>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="index">
+      Question: {{entry.question}}
+
+      {{#if isExpanded}}
+        <div>{{entry.answer}}</div>
+        <a {{action collapse}} href="">Hide answer</a>
+      {{else}}
+        <a {{action expand}} href="">Show answer...</a>
+      {{/if}}
+  </script>
+
+  <script src="../_lib/jquery-1.9.1.js"></script>
+  <script src="../_lib/handlebars-1.0.0-rc.3.js"></script>
+  <script src="../_lib/ember-1.0.0-rc.3.js"></script>
+  <script src="question.js"></script>
+
+</body>
+</html>

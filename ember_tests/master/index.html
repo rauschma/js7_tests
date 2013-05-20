@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Items</title>
+    <link rel="stylesheet" href="../_css/normalize.css">
+    <link rel="stylesheet" href="../_css/style.css">
+</head>
+<body>
+
+    <script type="text/x-handlebars">
+        <h1>Items</h1>
+        <div>
+            {{#linkTo items}}Home{{/linkTo}}
+        </div>
+        <hr>
+        {{outlet}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="items">
+        <ul>
+            {{#each x in controller}}
+                <li>{{#linkTo items.item x}}{{x.title}}{{/linkTo}}
+            {{/each}}
+        </ul>
+        <div>
+            {{outlet}}
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="items/item">
+        <h2>{{title}}</h2>
+        <ul>
+            <li><b>Authors:</b> {{authors}}</li>
+            <li><b>Publisher:</b> {{publisher}}</li>
+        </ul>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="items/index">
+        <p>Please select an item.</p>
+    </script>
+
+    <script src="../_lib/jquery-1.9.1.js"></script>
+    <script src="../_lib/handlebars-1.0.0-rc.3.js"></script>
+    <script src="../_lib/ember-1.0.0-rc.3.js"></script>
+    <script src="master.js"></script>
+
+</body>
+</html>
