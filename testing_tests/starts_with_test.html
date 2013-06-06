@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="lib/mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <script src="lib/expect.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script>mocha.setup('bdd')</script>
+
+  <script src="starts_with.js"></script>
+  <script src="starts_with_test.js"></script>
+  <script>
+    mocha.checkLeaks(); // check for accidental globals
+    mocha.globals([]); // ignore these globals
+    mocha.run();
+  </script>
+</body>
+</html>

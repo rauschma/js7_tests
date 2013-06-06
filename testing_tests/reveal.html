@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Reveal</title>
+    <style type="text/css">
+        .reveal .revealCollapseLink,
+        .reveal .revealContent {
+            display: none;
+        }
+
+        .reveal.expanded .revealCollapseLink,
+        .reveal.expanded .revealContent {
+            display: block;
+        }
+        .reveal.expanded .revealExpandLink {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reveal</h1>
+
+    Das ist die Frage.
+    <div class="reveal">
+        Das ist die Antwort.
+    </div>
+
+    <script id='revealTemplate' type="text/template">
+        <div class="revealExpandLink"><a href="">Antwort ▶</a></div>
+        <div class="revealCollapseLink"><a href="">Antwort ▼</a></div>
+        <div class="revealContent">@@@</div>
+    </script>
+    <script type="text/javascript">
+        [].forEach.call(document.getElementsByClassName('reveal'), function (elem) {
+            function toggle(event) {
+                elem.classList.toggle('expanded');
+                event.preventDefault();
+            }
+            elem.innerHTML = document.getElementById('revealTemplate').innerHTML.replace('@@@', elem.innerHTML);
+            elem.getElementsByClassName('revealExpandLink')[0].addEventListener('click', toggle);
+            elem.getElementsByClassName('revealCollapseLink')[0].addEventListener('click', toggle);
+        });
+        // ▶ ▼
+    </script>
+</body>
+</html>
