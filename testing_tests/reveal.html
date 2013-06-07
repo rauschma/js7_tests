@@ -37,7 +37,9 @@
                 elem.classList.toggle('expanded');
                 event.preventDefault();
             }
-            elem.innerHTML = document.getElementById('revealTemplate').innerHTML.replace('@@@', elem.innerHTML);
+            var templateText = document.getElementById('revealTemplate').innerHTML;
+            elem.innerHTML = templateText.replace('@@@', elem.innerHTML);
+
             elem.getElementsByClassName('revealExpandLink')[0].addEventListener('click', toggle);
             elem.getElementsByClassName('revealCollapseLink')[0].addEventListener('click', toggle);
         });
